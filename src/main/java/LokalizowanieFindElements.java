@@ -28,19 +28,19 @@ public class LokalizowanieFindElements {
         driver.findElement(By.linkText("SKLEP")).click();
 
         //utworzenie listy grafik
-        List<WebElement> wszystkieGrafiki = driver.findElements(By.xpath("//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image']"));
+        List<WebElement> allGraphics = driver.findElements(By.xpath("//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image']"));
 
         //sprawdzenie ilości grafik
-        int liczbaGrafik = wszystkieGrafiki.size();
+        int numberOfGraphics = allGraphics.size();
 
-        System.out.println("Liczba grafik produktowych na stronie = " + liczbaGrafik);
+        System.out.println("Liczba grafik produktowych na stronie = " + numberOfGraphics);
 
         //weryfikacja prawidłowej ilości grafik
-        Assert.assertEquals(liczbaGrafik, 12);
+        Assert.assertEquals(numberOfGraphics, 12);
 
         //wypisanie linków do wszystkich grafik
-        for(int i=0; i<liczbaGrafik; i++) {
-            System.out.println(wszystkieGrafiki.get(i).getAttribute("src"));
+        for(int i=0; i<numberOfGraphics; i++) {
+            System.out.println(allGraphics.get(i).getAttribute("src"));
         }
 
         driver.close();

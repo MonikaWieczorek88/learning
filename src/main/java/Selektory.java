@@ -23,34 +23,34 @@ public class Selektory {
 
 
         //kliknięcie zakładki Sklep
-        WebElement sklepMenu = driver.findElement(By.linkText("SKLEP"));
-        sklepMenu.click();
+        WebElement shopMenu = driver.findElement(By.linkText("SKLEP"));
+        shopMenu.click();
 
         //kliknięcie produktu "Koszulka Chelsea London"
-        WebElement koszulkaChelsea = driver.findElement(By.xpath("//h2[contains(text(), 'Chelsea')]"));
-        koszulkaChelsea.click();
+        WebElement chelseaTshirt = driver.findElement(By.xpath("//h2[contains(text(), 'Chelsea')]"));
+        chelseaTshirt.click();
 
         //wprowadzenie ilości 2
-        WebElement quantityField = driver.findElement(By.xpath("//*starts-with(@id, 'quantity_')]"));
+        WebElement quantityField = driver.findElement(By.xpath("//*[starts-with(@id, 'quantity_')]"));
         quantityField.clear();
         quantityField.sendKeys("2");
 
         //kliknięcie przycisku 'Dodaj do koszyka'
-        WebElement dodajDoKoszykaButton = driver.findElement(By.xpath("//button[@name='add-to-cart']"));
-        dodajDoKoszykaButton.click();
+        WebElement addToCartButton = driver.findElement(By.xpath("//button[@name='add-to-cart']"));
+        addToCartButton.click();
 
         //kliknięcie linku "Zobacz koszyk"
-        WebElement zobaczKoszykLink = driver.findElement(By.linkText("Zobacz koszyk"));
-        zobaczKoszykLink.click();
+        WebElement viewCartLink = driver.findElement(By.linkText("Zobacz koszyk"));
+        viewCartLink.click();
 
         //wprowadzenie kodu kuponu "Wiosna2020"
-        WebElement kodKuponuInput = driver.findElement(By.id("coupon_code"));
-        kodKuponuInput.clear();
-        kodKuponuInput.sendKeys("Wiosna2020");
+        WebElement couponCodeInput = driver.findElement(By.id("coupon_code"));
+        couponCodeInput.clear();
+        couponCodeInput.sendKeys("Wiosna2020");
 
         //kliknięcie przycisku 'Zastosuj kupon'
-        WebElement zastosujKuponButton = driver.findElement(By.name("apply_coupon"));
-        zastosujKuponButton.click();
+        WebElement applyCouponButton = driver.findElement(By.name("apply_coupon"));
+        applyCouponButton.click();
 
         driver.close();
         driver.quit();
