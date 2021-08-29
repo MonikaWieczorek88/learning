@@ -40,7 +40,7 @@ public class WieleOkien {
 
         //wypisanie pozycji z kolekcji
         for (String window: browserWindows){
-            System.out.println("Browser winodw: " + window);
+            System.out.println("Browser window: " + window);
         }
 
         //przeglądanie kolekcji i identyfikacja składowych
