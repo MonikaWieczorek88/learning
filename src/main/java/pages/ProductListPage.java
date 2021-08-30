@@ -29,14 +29,14 @@ public class ProductListPage extends TestBase {
         PageFactory.initElements(driver, this);
     }
 
-    //pobranie i zwrócenie ilości prouktów
+    //pobranie i zwrócenie ilości produktów
     public int getProductsNumber(){
         wait.until(ExpectedConditions.visibilityOfAllElements(productsItems));
         int allProdutsNumber = productsItems.size();
         return allProdutsNumber;
     }
 
-    //wybranie, z listysortującej, pozycji: Sortuj wg ceny: od najniższej
+    //wybranie, z listy sortującej, pozycji: Sortuj wg ceny: od najniższej
     public void sortProductByPrice(){
         Select orderByList = new Select(orderbyList);
         orderByList.selectByValue("price");
@@ -47,11 +47,11 @@ public class ProductListPage extends TestBase {
     //wypisanie produktów do konsoli
     public ArrayList getProductsNameAfterOrderByPrice(){
         sortProductByPrice();
-        ArrayList prouctsNameList = new ArrayList();
+        ArrayList productsNameList = new ArrayList();
         for (int i = 0; i <productsItems.size(); i++) {
-            prouctsNameList.add(productsName.get(i).getText());
-            System.out.println(prouctsNameList.get(i));
+            productsNameList.add(productsName.get(i).getText());
+            System.out.println(productsNameList.get(i));
         }
-        return prouctsNameList;
+        return productsNameList;
     }
 }

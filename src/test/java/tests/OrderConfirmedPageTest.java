@@ -48,7 +48,7 @@ public class OrderConfirmedPageTest extends TestBase {
 
 
 
-    //weryfikacja braku złożonych zamóień
+    //weryfikacja braku złożonych zamówień
     @Test(priority = 0)
     public void verifyNoOrders(){
         Assert.assertTrue(orderConfirmedPage.getInfoAboutOrders().contains(testdata.getProperty("correctInfoAboutOrder")));

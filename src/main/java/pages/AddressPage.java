@@ -28,7 +28,7 @@ public class AddressPage extends TestBase {
         return new DeliveryAddressDetailsPage();
     }
 
-    //pobranie i zwrócenie komunikatu dotycząego istnienia adresu dostawy
+    //pobranie i zwrócenie komunikatu dotycząego istniejcego adresu dostawy
     public String getInfoDeliveryAddress(){
         wait.until(ExpectedConditions.visibilityOf(infoDeliveryAddress));
         String message = infoDeliveryAddress.getText();

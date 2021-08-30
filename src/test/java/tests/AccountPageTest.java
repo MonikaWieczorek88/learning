@@ -36,6 +36,7 @@ public class AccountPageTest extends TestBase {
     // Po każdym teście zamknięcie przeglądarki
     @AfterMethod
     public void closeBrowser(){
+
         driver.quit();
     }
 

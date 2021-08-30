@@ -43,7 +43,7 @@ public class DeliveryAddressDetailsPageTest extends TestBase {
     }
 
 
-    /*********  TESTY *********/
+
     @Test(priority = 0)
     public void addDeliveryAddress() {
         addressPage = deliveryAddressDetailsPage.fillForm("Jan", "Testowy2", "Polska",
@@ -51,7 +51,7 @@ public class DeliveryAddressDetailsPageTest extends TestBase {
 
         Assert.assertEquals(addressPage.getInfoDeliveryAddress(),
                 "Jan Testowy2\n" +
-                        "Polska\n" +
+                        "Słoneczna\n" +
                         "00-001 Warszawa");
     }
 }
